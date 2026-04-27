@@ -65,3 +65,11 @@ See `ll.h` for the full set of functions and their preconditions. Briefly:
 - `llNodeGetValue` / `llNodeSetValue` — read or update the value held by a node.
 
 All functions assume non-NULL list and node pointers, and that any node passed alongside a list belongs to that list. Passing invalid pointers is undefined behavior.
+
+## Running the tests
+
+```sh
+make test
+```
+
+Builds `tests/test_ll.c` against `src/ll.c` with AddressSanitizer + UndefinedBehaviorSanitizer and runs the suite. Requires a C11 compiler.
